@@ -5,6 +5,7 @@ If the client(logappend, logread) and server programs are run on same machine, t
 If the client and server programs are run on different machines, then enter the IP address of server machine which is obtained by using the following commands in place of <ip_address> in logread and logapped code files
 
 FOR LINUX : "ip a"
+
 FOR MAC : "ipconfig getifaddr en0"
 
 Invoke Makefile to run the program.
