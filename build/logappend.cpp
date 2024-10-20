@@ -31,7 +31,7 @@ bool build_connection(int &sockfd){
     memset(&server_addr, 0, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
-    server_addr.sin_addr.s_addr = inet_addr("10.7.1.28");
+    server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
     // Connect to the server
     if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {

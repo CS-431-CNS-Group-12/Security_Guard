@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include "sha256.cpp"
 
 #define public_key  3
 #define private_key 12355

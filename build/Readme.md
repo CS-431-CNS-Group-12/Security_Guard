@@ -13,5 +13,4 @@ Invoke Makefile to run the program.
 Usage of logread and loappend commands : https://github.com/IITGN-CS431/problems/blob/main/securityguard/EXAMPLES.md  
 
 References :
-SHA256 algorithm from http://www.zedwood.com/article/cpp-sha256-function 
 RSA algorithm : https://www.geeksforgeeks.org/rsa-algorithm-cryptography/ 
