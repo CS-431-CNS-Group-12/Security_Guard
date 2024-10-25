@@ -1,13 +1,13 @@
-#CS431 : Security Guard
+# CS431 : Security Guard
 
-##Team Members:
--Chakradhar Basani
--Koleti Eswar Sai Ganesh
--Sriman Reddy
--Manav Jain
--Nakka Naga Bhuvith
--Pavan Deekshith
--Venigalla Harshith
+## Team Members:
+- Chakradhar Basani
+- Koleti Eswar Sai Ganesh
+- Sriman Reddy
+- Manav Jain
+- Nakka Naga Bhuvith
+- Pavan Deekshith
+- Venigalla Harshith
 
  server_addr.sin_addr.s_addr = inet_addr("<ip_address>");
 
