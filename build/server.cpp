@@ -64,13 +64,16 @@ LogEntry parseLogLine(const string& line) {
     ss >> entry.timestamp >> entry.name >> entry.type >> entry.status >> entry.roomId;
     return entry;
 }
-bool createCSV(string &filename) {
-    ofstream file(filename);
-    if (!file) {
+bool create_directory(const std::string& path) {
+    try {
+        if (!std::filesystem::exists(path)) {
+            return std::filesystem::create_directory(path);
+        }
+        return true; // Directory already exists
+    } catch (const std::filesystem::filesystem_error& e) {
+        std::cerr << "Error creating directory: " << e.what() << std::endl;
         return false;
     }
-    file.close();
-    return true;
 }
 
 bool store_csv(vector<string>& info) {
@@ -479,6 +482,7 @@ void startServer() {
     }
 
     cout << "Server is listening on port " << PORT << endl;
+    create_directory("logs");
 
     while (true) {
         int new_socket;
@@ -501,6 +505,7 @@ void startServer() {
             cout << decrypt_str << endl;
             bool flag=false;
             vector<string> info =str_break(decrypt_str);
+            info[2] ="logs/"+info[2];
             string info_type, info_key, file_path;
             info_type =info[0];
             // info_key =key_hashing(info[1]);
